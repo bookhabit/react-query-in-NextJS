@@ -3,7 +3,7 @@ import {useQuery,UseQueryResult} from "@tanstack/react-query"
 import { IPerson } from '@/lib/interfaces/IPerson';
 import Link from 'next/link';
 
-const fetchPerson = async ():Promise<IPerson>=>{
+export const fetchPerson = async ():Promise<IPerson>=>{
     const res= await fetch('/api/person')
     if(res.ok){
         return res.json();
